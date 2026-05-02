@@ -10,9 +10,9 @@ pygame.mixer.init()
 # using this for absolute path for vocal stims
 cwd = os.getcwd()
 sounds = [
-        pygame.mixer.Sound(os.path.join(cwd, "Cyber/static/sounds/40_Year_Old_Virgin.wav")),
-        pygame.mixer.Sound(os.path.join(cwd,"Cyber/static/sounds/Ooowee_Mr._Poopybutthole.wav")),
-        pygame.mixer.Sound(os.path.join(cwd,"Cyber/static/sounds/RespeckToDaLaw.wav")),
+        pygame.mixer.Sound(os.path.join(cwd, "static/sounds/40_Year_Old_Virgin.wav")),
+        pygame.mixer.Sound(os.path.join(cwd,"static/sounds/Ooowee_Mr._Poopybutthole.wav")),
+        pygame.mixer.Sound(os.path.join(cwd,"static/sounds/RespeckToDaLaw.wav")),
         ]
 
 @app.route('/')
@@ -28,3 +28,6 @@ def play_vocal_stim(stim: str):
         return {"status": "ok", "sound": stim}
 
     return {"status":"error", "sound" : "stim"}, 404
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", debug=True)
