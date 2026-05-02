@@ -9,6 +9,12 @@ a flask webapp running in Kiosk Mode (full screen, no address bar).
 distopian cyber-punk futuristic aesthetic.
 * SBC : Single Board Computer, such as any raspberry pi model
 
+## Installing Python Libraries:
+* For Mac/Windows: in the main directory, run:
+   `python -m pip install -r requirements.txt`
+* For most common distributions of Linux Debian, dnf installs 
+  are required, however currently the libraries used come
+  pre-installed.
 
 ## Starting the Webapp
 * After cloning the repository, cd into the directory and run:
