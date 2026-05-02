@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <!-- <meta charset="UTF-8"> -->
+  <!-- <time>Cyber Test</time> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cybercore.css') }}" type="text/css">
+  
+</head>
+<!-- darker green background color -->
+<body>
+
+<div class="control-panel cyber-noise">
+    <div style="padding: 10px;display: grid; grid-template-columns: repeat(3, 100px); grid-template-rows: repeat(3, 100px); gap: 1px;">
+	<div id="stim-card-0" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 1 </div></div>
+	<div id="stim-card-1" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 2 </div></div>
+	<div id="stim-card-2" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 3 </div></div>
+	<div id="stim-card-3" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 4 </div></div>
+	<div id="stim-card-4" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 5 </div></div>
+	<div id="stim-card-5" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 6 </div></div>
+	<div id="stim-card-6" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 7 </div></div>
+	<div id="stim-card-7" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 8 </div></div>
+	<div id="stim-card-8" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 9 </div></div>
+    </div>
+</div>
+<div class="control-panel cyber-noise">
+    <div class="section">
+      <p class="cyber-mono section-label">// PRIMARY ACTIONS</p>
+      <div class="btn-row">
+        <button class="cyber-btn">EXECUTE</button>
+        <button id="voc-stim-btn-0" class="cyber-btn cyber-btn--magenta">VOCAL STIM</button>
+        <button class="cyber-btn cyber-btn--green">CONFIRM</button>
+        <button class="cyber-btn cyber-btn--yellow">STANDBY</button>
+      </div>
+    </div>
+    <div class="section">
+      <p class="cyber-mono section-label">// SECONDARY ACTIONS</p>
+      <div class="btn-row">
+        <button class="cyber-btn cyber-btn--outline">SCAN NETWORK</button>
+        <button class="cyber-btn cyber-btn--ghost">CANCEL OPERATION</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- This script adjusts the tab/window title , instead of the default IP address+PORT -->
+<script>
+  document.title = "Cyber Widget – Online";
+</script>
+
+<script src="{{ url_for('static', filename='js/cyber.js') }}"></script>
+
+</html>
