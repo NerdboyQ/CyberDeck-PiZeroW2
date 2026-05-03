@@ -13,6 +13,12 @@ sounds = [
         pygame.mixer.Sound(os.path.join(cwd, "static/sounds/40_Year_Old_Virgin.wav")),
         pygame.mixer.Sound(os.path.join(cwd,"static/sounds/Ooowee_Mr._Poopybutthole.wav")),
         pygame.mixer.Sound(os.path.join(cwd,"static/sounds/RespeckToDaLaw.wav")),
+        pygame.mixer.Sound(os.path.join(cwd, "static/sounds/GhettoRatatata.wav")),
+        pygame.mixer.Sound(os.path.join(cwd,"static/sounds/oh_brother.wav")),
+        pygame.mixer.Sound(os.path.join(cwd,"static/sounds/WhereWeBoutToEatAt.wav")),
+        pygame.mixer.Sound(os.path.join(cwd, "static/sounds/ImNotSure.wav")),
+        pygame.mixer.Sound(os.path.join(cwd,"static/sounds/ItGetWicked.wav")),
+        pygame.mixer.Sound(os.path.join(cwd,"static/sounds/StillHere.wav")),
         ]
 
 @app.route('/')
