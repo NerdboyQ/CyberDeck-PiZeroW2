@@ -2,28 +2,32 @@
 
 <html lang="en">
 <head>
-  <!-- <meta charset="UTF-8"> -->
+  <meta charset="UTF-8">
   <!-- <time>Cyber Test</time> -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/cybercore.css') }}" type="text/css">
-  
+  <!--  NOTE: 
+    The downloaded tabler-icons.min.css files points to a fonts file, tabler-icons.woff2, that 
+    is located in the fonts directory. This had to be manually updated to point to:
+      ../font/tabler-icons.woff2
+    Without this change, the icons will not load and will show as blank squares.
+  -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tabler-icons.min.css') }}" type="text/css">
 </head>
 <!-- darker green background color -->
 <body>
-
 <div class="control-panel cyber-noise">
     <div style="padding: 10px;display: grid; grid-template-columns: repeat(3, 100px); grid-template-rows: repeat(3, 100px); gap: 1px;">
-	<div id="stim-card-0" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 1 </div></div>
-	<div id="stim-card-1" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 2 </div></div>
-	<div id="stim-card-2" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 3 </div></div>
-	<div id="stim-card-3" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 4 </div></div>
-	<div id="stim-card-4" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 5 </div></div>
-	<div id="stim-card-5" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 6 </div></div>
-	<div id="stim-card-6" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 7 </div></div>
-	<div id="stim-card-7" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 8 </div></div>
-	<div id="stim-card-8" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> <div class="cyber-card__body cyber-text-center">  col 9 </div></div>
+      {% for i in range(9) %}
+      <div id="stim-card-{{ i }}" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> 
+        <div class="cyber-card__body cyber-text-center" style="display: flex; flex-direction: column; align-items: center;"> 
+          <i class="ti ti-volume cyber-icon--md cyber-icon--cyan"></i>
+          <span>{{ i + 1 }}</span>
+        </div>
+      </div>
+      {% endfor %}
     </div>
 </div>
-<div class="control-panel cyber-noise">
+<!--div class="control-panel cyber-noise">
     <div class="section">
       <p class="cyber-mono section-label">// PRIMARY ACTIONS</p>
       <div class="btn-row">
@@ -40,7 +44,7 @@
         <button class="cyber-btn cyber-btn--ghost">CANCEL OPERATION</button>
       </div>
     </div>
-  </div>
+  </div-->
 </body>
 
 <!-- This script adjusts the tab/window title , instead of the default IP address+PORT -->
