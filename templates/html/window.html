@@ -2,7 +2,14 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" name="viewport" content="width=480, initial-scale=1.0">
+  <style>
+    body {
+      width: 480px;
+      max-width: 480px;
+      overflow-x: hidden;
+    }
+  </style>
   <!-- <time>Cyber Test</time> -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/cybercore.css') }}" type="text/css">
   <!--  NOTE: 
@@ -15,9 +22,9 @@
 </head>
 <!-- darker green background color -->
 <body>
-<div class="control-panel cyber-noise">
-    <div style="padding: 10px;display: grid; grid-template-columns: repeat(3, 100px); grid-template-rows: repeat(3, 100px); gap: 1px;">
-      {% for i in range(9) %}
+<div class="control-panel cyber-noise cyber-text-center" style="margin-top: auto;">
+    <div style="padding: 10px;display: grid; grid-template-columns: repeat(4, 100px); grid-template-rows: repeat(2, 100px); gap: 1px;">
+      {% for i in range(8) %}
       <div id="stim-card-{{ i }}" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> 
         <div class="cyber-card__body cyber-text-center" style="display: flex; flex-direction: column; align-items: center;"> 
           <i class="ti ti-volume cyber-icon--md cyber-icon--cyan"></i>
