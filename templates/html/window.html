@@ -2,12 +2,20 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8" name="viewport" content="width=480, initial-scale=1.0">
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <style>
     body {
+      margin: 0;
+      padding: 0;
+      height: 320px;
+      max-height: 320px;
       width: 480px;
       max-width: 480px;
       overflow-x: hidden;
+      /* The lines below helped with aligning the buttons to the bottom of the display */
+      display: flex; /* Activate Flexbox */
+      flex-direction: column; /* Stack children vertically */
+      justify-content: flex-end; /* Pin children to the bottom */
     }
   </style>
   <!-- <time>Cyber Test</time> -->
@@ -22,8 +30,10 @@
 </head>
 <!-- darker green background color -->
 <body>
-<div class="control-panel cyber-noise cyber-text-center" style="margin-top: auto;">
-    <div style="padding: 10px;display: grid; grid-template-columns: repeat(4, 100px); grid-template-rows: repeat(2, 100px); gap: 1px;">
+<!-- 1fr - fractional grid setting, evenly dividing the columns based on the parent width -->
+<!-- box-sizing set to border-box to permit consistent box orientation -->
+<div class="control-panel cyber-noise cyber-text-center" style="width:100%;box-sizing:border-box;">
+    <div style="padding: 25px;display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 100px); gap: 1px;margin-bottom:0;">
       {% for i in range(8) %}
       <div id="stim-card-{{ i }}" style="width: 100px; height: 100px;" class="cyber-card cyber-card--interactive"> 
         <div class="cyber-card__body cyber-text-center" style="display: flex; flex-direction: column; align-items: center;"> 
