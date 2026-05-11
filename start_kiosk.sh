@@ -5,6 +5,7 @@ DISPLAY=:0 chromium \
   --disable-gpu \
   --disable-software-rasterizer \
   --disable-dev-shm-usage \
+  --force-device-scale-factor=1.0 \
   --window-size=480,320 \
   --window-position=0,0 \
   --noerrdialogs \
